@@ -1,0 +1,8 @@
+.list{
+  width: 70%;
+  margin: 0.9rem;
+  text-align: center;
+  background-color: rgb(188, 133, 240);
+  border-radius: 1.0rem;
+  /* text-decoration: none; */
+}

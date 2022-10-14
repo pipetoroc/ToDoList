@@ -5,9 +5,10 @@ import { ToDoSearch } from "./components/ToDoSearch";
 import { ToDoList } from "./components/ToDoList";
 import { CreateToDoButton } from "./components/CreateToDoButton";
 import { ToDoItem } from "./components/ToDoItem";
+import { MainTitle } from "./components/MainTitle";
 
 const toDo = [
-  { text: "Almorzor", completed: false },
+  { text: "Almorzar", completed: false },
   { text: "ir a celebrar mi cumpleanos", completed: false },
   { text: "hacer algo diferente", completed: false },
 ];
@@ -15,10 +16,11 @@ const toDo = [
 function App(props) {
   return (
     <React.Fragment>
+      <MainTitle/>
       <ToDoCounter />
       <ToDoSearch />
       <ToDoList>
-        {toDo.map((task) => (
+        {toDo.map((toDo) => (
           <ToDoItem key={toDo.text} text={toDo.text} />
         ))}
       </ToDoList>
