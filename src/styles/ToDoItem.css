@@ -1,8 +1,19 @@
 .list{
-  width: 70%;
+  display: flex;
+  justify-content: space-around ;
+  align-items: center;
+  width: 60%;
+  height: 2.875rem;
   margin: 0.9rem;
   text-align: center;
   background-color: rgb(188, 133, 240);
   border-radius: 1.0rem;
   /* text-decoration: none; */
+}
+.list--span{
+  /* display: block; */
+  /* position: absolute;
+  right: 8.3rem; */
+  /* top: 20rem; */
+  font-size: 2.5rem;
 }

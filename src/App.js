@@ -8,8 +8,8 @@ import { ToDoItem } from "./components/ToDoItem";
 import { MainTitle } from "./components/MainTitle";
 
 const toDo = [
-  { text: "Almorzar", completed: false },
-  { text: "ir a celebrar mi cumpleanos", completed: false },
+  { text: "Almorzar", completed: true },
+  { text: "ir a celebrar mi cumpleanos", completed: true },
   { text: "hacer algo diferente", completed: false },
 ];
 
