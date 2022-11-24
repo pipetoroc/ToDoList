@@ -1,8 +1,8 @@
 .input-check {
     /* CSS */
-  /* position: relative; */
-  left: 9.5rem;
-  top: 1.3rem;
+  position: absolute;
+  left: 0.9rem;
+  /* top: 1.3rem; */
   background-color: white;
   border-radius: 50%;
   box-shadow: rgba(44, 187, 99, .2) 0 -25px 18px -14px inset,rgba(44, 187, 99, .15) 0 1px 2px,rgba(44, 187, 99, .15) 0 2px 4px,rgba(44, 187, 99, .15) 0 4px 8px,rgba(44, 187, 99, .15) 0 8px 16px,rgba(44, 187, 99, .15) 0 16px 32px;

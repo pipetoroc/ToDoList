@@ -1,14 +1,30 @@
 import React from "react";
-import { InputCheck } from "./InputCheck";
-import "../styles/ToDoItem.css"
+// import { InputCheck } from "./InputCheck";
+import "../styles/ToDoItem.css";
 
 function ToDoItem(props) {
+
   return (
-    <li className="list">
-      {/* <div className="list--div"> </div> */}
-      <InputCheck/>
-      <p className="list--p"> {props.text}</p>
-      <span className="list--span"> X </span>
+    <li className="ToDoItem">
+      <span
+        className={`ToDoItem--icon ToDoItem--icon-check ${
+          props.completed && "ToDoItem--icon-check__active"
+        }`}
+        onClick={props.onComplete}
+      ></span>
+      <p
+        className={`ToDoItem--text ${
+          props.completed && "ToDoItem--text__complete"
+        }`}
+      >
+        {props.text}
+      </p>
+      <span
+        className="ToDoItem--icon ToDoItem--icon-delete"
+        onClick={props.onDelete}
+      >
+        X
+      </span>
     </li>
   );
 }

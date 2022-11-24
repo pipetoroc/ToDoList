@@ -1,8 +1,18 @@
 import React from "react";
-import "../styles/CreateToDoButton.css"
+import "../styles/CreateToDoButton.css";
 
 function CreateToDoButton() {
-  return <button className="add-button"> + </button>;
+  const addTask = (msj) => {
+    alert(msj);
+  };
+  return (
+    <button
+      className="add-button"
+      onClick={() => addTask('Aca se esta construyendo algo')}
+    >
+      +
+    </button>
+  );
 }
 
 export { CreateToDoButton };

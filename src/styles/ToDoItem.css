@@ -1,19 +1,49 @@
-.list{
+.ToDoItem{
   display: flex;
-  justify-content: space-around ;
+  justify-content: center;
   align-items: center;
-  width: 60%;
+  position: relative;
+  min-width: 50%;
+  width: fit-content;
   height: 2.875rem;
-  margin: 0.9rem;
+  margin-bottom: 1.5rem;
   text-align: center;
   background-color: rgb(188, 133, 240);
   border-radius: 1.0rem;
   /* text-decoration: none; */
 }
-.list--span{
-  /* display: block; */
-  /* position: absolute;
-  right: 8.3rem; */
-  /* top: 20rem; */
-  font-size: 2.5rem;
+.ToDoItem--icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  height: 3rem;
+  width: 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.ToDoItem--icon-check{
+  display: block;
+  left: .75rem;
+  height: 0.95rem;
+  width: 0.95rem;
+  background-color: aliceblue;
+  border-radius: 50%;
+}
+.ToDoItem--icon-check__active{
+  background-color: green;
+}
+.ToDoItem--text{
+  font-size: 1.4rem;
+}
+.ToDoItem--text__complete{
+  text-decoration: line-through;
+}
+.ToDoItem--icon-delete{
+  top: -1.5rem;
+  right: 0rem;  
+}
+.ToDoItem--icon-delete:hover{
+  color: red;
 }
