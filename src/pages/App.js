@@ -1,20 +1,30 @@
 // import './App.css';
 import React from "react";
-import { ToDoCounter } from "./components/ToDoCounter";
-import { ToDoSearch } from "./components/ToDoSearch";
-import { ToDoList } from "./components/ToDoList";
-import { CreateToDoButton } from "./components/CreateToDoButton";
-import { ToDoItem } from "./components/ToDoItem";
-import { MainTitle } from "./components/MainTitle";
+import { ToDoCounter } from "../components/ToDoCounter";
+import { ToDoSearch } from "../components/ToDoSearch";
+import { ToDoList } from "../components/ToDoList";
+import { CreateToDoButton } from "../components/CreateToDoButton";
+import { ToDoItem } from "../components/ToDoItem";
+import { MainTitle } from "../components/MainTitle";
 
-const defaulttoDo = [
-  { text: "Almorzar", completed: false },
-  { text: "ir a celebrar mi cumpleanos", completed: false },
-  { text: "hacer algo diferente", completed: true },
-];
+// const defaulttoDo = [
+//   { text: "Almorzar", completed: false },
+//   { text: "ir a celebrar mi cumpleanos", completed: false },
+//   { text: "hacer algo diferente", completed: true },
+// ];
 
 function App(props) {
-  const [toDos, setToDos] = React.useState(defaulttoDo);
+  const localStorageToDos = localStorage.getItem('TODOS_V1');
+  let parsedToDos;
+
+  if(!localStorageToDos){
+    localStorage.setItem('TODOS_V1', JSON.stringify([]));
+    parsedToDos = [];
+  }else{
+    parsedToDos = JSON.parse(localStorageToDos);
+  }
+
+  const [toDos, setToDos] = React.useState(parsedToDos);
   const [searchValue, setSearchValue] = React.useState("");
 
   const completedToDos = toDos.filter((toDos) => toDos.completed).length;
@@ -33,12 +43,19 @@ function App(props) {
       return toDoText.includes(searchText);
     });
   }
+
+  const saveToDos = (newToDos) => {
+    const stringifiedToDos = JSON.stringify(newToDos);
+    localStorage.setItem('TODOS_V1', stringifiedToDos);
+    setToDos(newToDos);
+  };
+
   const completeToDo = (text) => {
     const toDoIndex = toDos.findIndex(toDo => toDo.text === text );
 
     const newToDos = [...toDos];
     newToDos[toDoIndex].completed=true;
-    setToDos(newToDos);
+    saveToDos(newToDos);
   };
   
   const deleteToDo = (text) => {
@@ -46,9 +63,8 @@ function App(props) {
 
     const newToDos = [...toDos];
     newToDos.splice(toDoIndex, 1);
-    setToDos(newToDos);
+    saveToDos(newToDos);
   };
-
 
   return (
     <React.Fragment>
