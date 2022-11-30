@@ -5,36 +5,51 @@ import { ToDoSearch } from "../components/ToDoSearch";
 import { ToDoList } from "../components/ToDoList";
 import { CreateToDoButton } from "../components/CreateToDoButton";
 import { ToDoItem } from "../components/ToDoItem";
+import { ToDoForm } from "../components/ToDoForm";
 import { MainTitle } from "../components/MainTitle";
+import { Modal } from "../components/Modal";
 
 function AppUi() {
+  const {
+    error,
+    loading,
+    searchedToDos,
+    completeToDo,
+    deleteToDo,
+    openModal,
+    setOpenModal,
+  } = React.useContext(ToDoContext);
   return (
     <React.Fragment>
       <MainTitle />
       <ToDoCounter />
       <ToDoSearch />
 
-      <ToDoContext.Consumer>
-        {({ error, loading, searchedToDos, completeToDo, deleteToDo }) => (
-          <ToDoList>
-            {error && <p>Desesperate, hubo un error</p>}
-            {loading && <p>Estamos cargando, no deseperes</p>}
-            {!loading && !searchedToDos.length && <p>Crea tu primer Tarea</p>}
+      <ToDoList>
+        {error && <p>Desesperate, hubo un error</p>}
+        {loading && <p>Estamos cargando, no deseperes</p>}
+        {!loading && !searchedToDos.length && <p>Crea tu primer Tarea</p>}
 
-            {searchedToDos.map((toDo) => (
-              <ToDoItem
-                key={toDo.text}
-                text={toDo.text}
-                completed={toDo.completed}
-                onComplete={() => completeToDo(toDo.text)}
-                onDelete={() => deleteToDo(toDo.text)}
-              />
-            ))}
-          </ToDoList>
-        )}
-      </ToDoContext.Consumer>
+        {searchedToDos.map((toDo) => (
+          <ToDoItem
+            key={toDo.text}
+            text={toDo.text}
+            completed={toDo.completed}
+            onComplete={() => completeToDo(toDo.text)}
+            onDelete={() => deleteToDo(toDo.text)}
+          />
+        ))}
+      </ToDoList>
 
-      <CreateToDoButton />
+      {openModal && (
+        <Modal>
+          <ToDoForm/>
+        </Modal>
+      )}
+
+      <CreateToDoButton 
+        setOpenModal={setOpenModal}
+      />
     </React.Fragment>
   );
 }

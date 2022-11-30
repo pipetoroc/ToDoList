@@ -1,14 +1,16 @@
 import React from "react";
 import "../styles/CreateToDoButton.css";
+import { ToDoContext } from "../ToDoContext";
 
-function CreateToDoButton() {
-  const addTask = (msj) => {
-    alert(msj);
+function CreateToDoButton(props) {
+
+  const addTask = () => {
+    props.setOpenModal(prevState => !prevState);
   };
   return (
     <button
       className="add-button"
-      onClick={() => addTask('Aca se esta construyendo algo')}
+      onClick={addTask}
     >
       +
     </button>
