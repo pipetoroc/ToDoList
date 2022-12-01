@@ -1,8 +1,8 @@
-import React from "react";
-import "../styles/InputCheck.css"
+// import React from "react";
+// import "../styles/InputCheck.css"
 
-function InputCheck() {
-  return <input type="checkbox" className="input-check" unchecked/>;
-}
+// function InputCheck(props) {
+//   return <input type="checkbox" className="input-check"/>;
+// }
 
-export { InputCheck };
+// export { InputCheck };

@@ -7,14 +7,25 @@
 }
 .list-title{
   text-align: center;
+  margin-bottom: 2rem;
 }
 .message-error{
   text-align: center;
 }
+.icon-task-container{
+  display: flex;
+  justify-content: center;
+  margin: 3rem auto 1rem;
+  height: 20rem;
+  min-width: 310px;
+  
+}
 .icon-task{
-  margin: 3rem auto;
+  /* margin: 3rem auto 1rem;
   height: 14rem;
-  width: 20rem;
+  width: 20rem; */
+  min-width: 300px;
+  height: 100%;
   background-image: url('https://images.pexels.com/photos/3832031/pexels-photo-3832031.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   background-size: cover;
   background-position: center;

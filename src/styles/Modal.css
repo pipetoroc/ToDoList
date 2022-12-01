@@ -1,4 +1,5 @@
 .ModalBackground {
+  width: 100%;
   background: rgba(32,35,41,.8);
   position: fixed;
   top: -10px;

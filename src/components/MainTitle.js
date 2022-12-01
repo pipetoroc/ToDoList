@@ -3,7 +3,7 @@ import "../styles/MainTitle.css"
 
 function MainTitle () {
   return (
-    <h1 className="main-title"> To do List </h1>
+    <h1 className="main-title"> App Traking Tasks </h1>
   )
 }
 

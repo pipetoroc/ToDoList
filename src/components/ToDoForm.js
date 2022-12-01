@@ -1,5 +1,6 @@
 import React from "react";
 import { ToDoContext } from "../ToDoContext";
+import '../styles/ToDoForm.css'
 
 function ToDoForm() {
   const [newToDoValue, setNewToDoValue] = React.useState("");
@@ -18,20 +19,20 @@ function ToDoForm() {
     setOpenModal(false)
   };
   return (
-    <form onSubmit={onSubmit}>
-      <label> ... </label>
+    <form className='form-container' onSubmit={onSubmit}>
+      <label> Please, write your duties </label>
       <textarea
         value={newToDoValue}
         onChange={onChange}
         placeholder="Por Favor escribe aca tu tarea"
       />
-      <div>
-        <button
+      <div className="button-container" >
+        <button className="add-button add-button__cancel"
           onClick={onCancel}
           type="button">
           Cancelar
         </button>
-        <button type="submit" onClick={onSubmit}>Agregar</button>
+        <button className="add-button" type="submit" onClick={onSubmit}>Agregar</button>
       </div>
     </form>
   );
