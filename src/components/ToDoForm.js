@@ -30,9 +30,9 @@ function ToDoForm() {
         <button className="add-button add-button__cancel"
           onClick={onCancel}
           type="button">
-          Cancelar
+          Cancel
         </button>
-        <button className="add-button" type="submit" onClick={onSubmit}>Agregar</button>
+        <button className="add-button" type="submit" onClick={onSubmit}>Add</button>
       </div>
     </form>
   );

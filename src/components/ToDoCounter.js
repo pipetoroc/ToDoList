@@ -7,12 +7,12 @@ function ToDoCounter() {
 
   if(totalToDos === 0){
     return (
-      <h2 className="to-do-title"> No tienes tareas pendientes </h2>
+      <h2 className="to-do-title"> You don't have task to do </h2>
     )
   }  
   return (
     <h2 className="to-do-title" >
-      Has completado {completedToDos} de tus {totalToDos} tareas pendientes
+      You've completed {completedToDos} tasks, you still have to do {totalToDos} more
     </h2>
   );
 }
