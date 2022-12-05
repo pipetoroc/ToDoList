@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/ToDoSearch.css";
+import "./ToDoSearch.css";
 import { ToDoContext } from "../ToDoContext";
 
 function ToDoSearch() {

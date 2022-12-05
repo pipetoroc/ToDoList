@@ -1,6 +1,6 @@
 import React from "react";
 // import { InputCheck } from "./InputCheck";
-import "../styles/ToDoItem.css";
+import "./ToDoItem.css";
 
 function ToDoItem(props) {
 

@@ -1,6 +1,6 @@
 // import './App.css';
 import React from "react";
-import { ToDoProvider } from "../ToDoContext";
+import { ToDoProvider } from "../components/ToDoContext";
 import { AppUi } from "./AppUi";
 
 function App(props) {

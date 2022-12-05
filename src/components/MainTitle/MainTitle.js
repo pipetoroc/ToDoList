@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/MainTitle.css"
+import "./MainTitle.css"
 
 function MainTitle () {
   return (

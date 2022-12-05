@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/ToDoCounter.css";
+import "./ToDoCounter.css";
 import { ToDoContext } from "../ToDoContext";
 
 function ToDoCounter() {

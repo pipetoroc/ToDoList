@@ -1,6 +1,6 @@
 import React from "react";
 import { ToDoContext } from "../ToDoContext";
-import '../styles/ToDoForm.css'
+import "./ToDoForm.css";
 
 function ToDoForm() {
   const [newToDoValue, setNewToDoValue] = React.useState("");

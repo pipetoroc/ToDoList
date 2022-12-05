@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/ToDoList.css";
+import "./ToDoList.css";
 
 function ToDoList({ error, loading, searchedToDos, children }) {
   return (
