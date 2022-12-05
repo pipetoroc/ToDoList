@@ -32,7 +32,7 @@
   border-radius: 50%;
 }
 .ToDoItem--icon-check__active{
-  background-color: green;
+  background-color: #008000;
 }
 .ToDoItem--text{
   font-size: 1.4rem;

@@ -1,17 +1,17 @@
 import React from "react";
-// import { InputCheck } from "./InputCheck";
 import "./ToDoItem.css";
+import {CompleteIcon} from '../ToDoIcon/CompleteIcon';
+import {DeleteIcon} from '../ToDoIcon/CompleteIcon';
+
 
 function ToDoItem(props) {
 
   return (
     <li className="ToDoItem">
-      <span
-        className={`ToDoItem--icon ToDoItem--icon-check ${
-          props.completed && "ToDoItem--icon-check__active"
-        }`}
-        onClick={props.onComplete}
-      ></span>
+      <CompleteIcon
+      completed={props.completed}
+      onComplete={props.onComplete}
+      />
       <p
         className={`ToDoItem--text ${
           props.completed && "ToDoItem--text__complete"
@@ -19,12 +19,9 @@ function ToDoItem(props) {
       >
         {props.text}
       </p>
-      <span
-        className="ToDoItem--icon ToDoItem--icon-delete"
-        onClick={props.onDelete}
-      >
-        X
-      </span>
+      <DeleteIcon
+        onDelete={props.onDelete}
+      />
     </li>
   );
 }
