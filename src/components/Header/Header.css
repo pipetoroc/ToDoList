@@ -1,0 +1,25 @@
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  padding: 0 14px;
+  background-color: rgb(205, 154, 218) ;
+  
+}
+.logo{
+  width: 100px;
+  height: 100px;
+  background-image: url("../assets/logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.icon{
+  font-size: 4rem;
+  cursor: pointer;
+}
+a{
+  color: black;
+}

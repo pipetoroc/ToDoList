@@ -8,6 +8,7 @@ import { ToDoItem } from "../components/ToDoItem";
 import { ToDoForm } from "../components/ToDoForm";
 import { MainTitle } from "../components/MainTitle";
 import { Modal } from "../components/Modal";
+import Header from "../components/Header/Header";
 
 function AppUi() {
   const {
@@ -21,6 +22,7 @@ function AppUi() {
   } = React.useContext(ToDoContext);
   return (
     <React.Fragment>
+      <Header/>
       <MainTitle />
       <ToDoCounter />
       <ToDoSearch />
