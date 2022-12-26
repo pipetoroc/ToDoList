@@ -5,7 +5,7 @@ import {AiFillGithub, AiFillLinkedin} from 'react-icons/ai'
 function Header() {
   return (
     <header>
-      <img className='logo'></img>
+      <img className='logo' alt=''></img>
     <div>
       <a target='blank' href='https://github.com/pipetoroc'>
         <AiFillGithub className='icon'></AiFillGithub>
